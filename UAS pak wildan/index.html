@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>my website | profile</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="infiltro logo.svg" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <button class="burger" onclick="toggleMenu()"></button>
+    <div class="background"></div>
+    <div class="menu">
+      <nav>
+        <a href="#about-page" style="animation-delay: 0.2s">
+          <span class="material-icons"> account_circle </span> About Me</a
+        >
+        <a href="#skills-page" style="animation-delay: 0.3s">
+          <span class="material-icons"> psychology </span> Skill</a
+        >
+        <a href="#service-page" style="animation-delay: 0.4s">
+          <span class="material-icons"> info </span> Services</a  
+        >
+        <a href="contact.html" style="animation-delay: 0.5s">
+          <span class="material-icons"> contact_support </span> Contact</a
+        >
+        <a href="infiltro.html" style="animation-delay: 0.6s">
+          infiltro.network</a
+        >
+        <a href="signup.html" style="animation-delay: 0.7s">
+          <span class="material-icons"> person </span> sign up</a
+        >
+      </nav>
+    </div>
+
+    <!-- banner 1 -->
+
+    <section class="banner" id="about-page">
+      <div>
+        <img src="logo.png" alt="" class="logo-line" />
+        <h2>Hi, Aku Syauqi</h2>
+        <h3>
+          selamat datang di website sederhana ini, web tentang diriku dan
+          berbagai hal tentang desain grafis
+        </h3>
+      </div>
+      <img src="profile photo.jpg" class="profile" />
+    </section>
+
+    <!-- banner 2 (skills) -->
+    <section class="skill" id="skills-page">
+      <div>
+        <h2>My Skill</h2>
+        <h3>
+          aku menguasai banyak bidang, termasuk desain grafis, tidak sedikit
+          yang aku kerjakan di bidang ini
+        </h3>
+        <button class="skill-Btn">mau lihat karyaku?</button>
+        <button class="skill-Btn">sertifikasi</button>
+        <button class="skill-Btn">kejuaraan</button>
+      </div>
+      <img src="3572690-01.png" alt="" class="ilustrImg" />
+    </section>
+
+    <!-- section 3 (services) -->
+
+    <section class="service" id="service-page">
+      <div class="context-white">
+        <h2>Service</h2>
+        <h3>
+          layanan untuk membuat desain dan berbagai macam pemesanan untuk
+          freelance
+        </h3>
+        <p>
+          tidak hanya desain grafis, tapi juga berbagai macam kreatif digital,
+          fotografi, web desain, videografi dan lain-lain
+        </p>
+        <a href="#">
+          <button class="service_Btn">Pesan</button>
+        </a>
+
+        <a href="card.html">
+          <button class="service_Btn_block">lihat daftar</button>
+        </a>
+      </div>
+      <img src="developing-01.png" alt="" class="digitalIllustr" />
+    </section>
+
+    <!-- signup -->
+    <section class="sign-action">
+      <h1 class="login-title">LOGIN/MASUK</h1>
+      <br />
+      <hr />
+      <br />
+      <div class="action-wrapper">
+        <a href="signup.html">
+          <button class="action-log">
+            sign up <span class="material-icons"> east </span>
+          </button>
+        </a>
+        <a href="login.html">
+          <button class="action-log">
+            login <span class="material-icons"> east </span>
+          </button>
+        </a>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <section class="footer-sect">
+      <footer class="top">
+        <img src="logo.png" />
+        <div class="links">
+          <div class="links-column">
+            <h2>Get Started</h2>
+            <a href="#" class="linksType">Introduction</a>
+            <a href="#" class="linksType">Documentation</a>
+            <a href="#" class="linksType">Usage</a>
+            <a href="#" class="linksType">Globals</a>
+            <a href="#" class="linksType">Elements</a>
+          </div>
+          <div class="links-column">
+            <h2>Resources</h2>
+            <a href="#" class="linksType">API</a>
+            <a href="#" class="linksType">Visibility</a>
+            <a href="#" class="linksType">Accessibility</a>
+            <a href="#" class="linksType">Community</a>
+            <a href="#" class="linksType">Marketplace</a>
+          </div>
+          <div class="links-column socials-column">
+            <h2>Social Media</h2>
+            <p>
+              Follow us on social media to find out the latest updates on our
+              progress.
+            </p>
+            <div class="socials">
+              <a class="fa-brands fa-facebook linksType"></a>
+              <a class="fa-brands fa-instagram linksType"></a>
+              <a class="fa-brands fa-linkedin linksType"></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <footer class="bottom">
+        <p class="copyright">© 2023 All rights reserved</p>
+        <div class="legal">
+          <a> License </a>
+          <a> Terms </a>
+          <a> Privacy </a>
+        </div>
+      </footer>
+    </section>
+
+    <!-- scroll up -->
+    <a href="#" class="backto-top">
+      <span class="material-symbols-outlined"> arrow_upward </span>
+      <span class="desctext">kembali ke atas</span>
+    </a>
+
+    <!-- scriptJs -->
+    <script>
+      const toggleMenu = () => document.body.classList.toggle("open");
+    </script>
+  </body>
+</html>

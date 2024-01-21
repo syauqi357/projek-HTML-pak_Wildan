@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login page | infiltro network</title>
+    <link rel="stylesheet" href="login.css" />
+    <link rel="icon" href="infiltro logo.svg">
+  </head>
+  <body>
+    <!-- navbar -->
+
+    <nav id="navbar">
+      <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
+
+      <button
+        type="button"
+        class="navbar-burger menu--control"
+        onclick="toggleMenuOpen()"
+      >
+        <span class="material-icons">menu</span>
+      </button>
+      <img src="infiltro logo.svg" alt="" class="navbar-title" />
+      <nav class="navbar-menu">
+        <ul>
+          <li>
+            <a href="index.html">about me</a>
+          </li>
+          <li>
+            <a href="index.html">skill</a>
+          </li>
+          <li>
+            <a href="index.html">service</a>
+          </li>
+          <a href="signup.html">
+            <button class="contr-action">sign up</button>
+          </a>
+        </ul>
+      </nav>
+    </nav>
+
+    <div class="login">
+      <img src="logo.png" class="logo-score" />
+      <h3>selamat datang</h3>
+      <h2>silahkan login</h2>
+
+      <div class="login-form">
+        <input type="text" placeholder="username" />
+        <input type="password" placeholder="password" />
+        <a href="card.html">
+          <button type="submit">LOGIN</button>
+        </a>
+        
+        <span>
+          don't have account?
+          <a href="signup.html" class="sign-link">sign up</a>
+        </span>
+      </div>
+    </div>
+
+    <!-- script -->
+
+    <script>
+      const toggleMenuOpen = () => document.body.classList.toggle("open");
+
+      const nav = document.querySelector("#navbar");
+
+      const onScroll = (event) => {
+        const scrollPosition = event.target.scrollingElement.scrollTop;
+        if (scrollPosition > 10) {
+          if (!nav.classList.contains("scrolled-down")) {
+            nav.classList.add("scrolled-down");
+          }
+        } else {
+          if (nav.classList.contains("scrolled-down")) {
+            nav.classList.remove("scrolled-down");
+          }
+        }
+      };
+
+      document.addEventListener("scroll", onScroll);
+    </script>
+  </body>
+</html>

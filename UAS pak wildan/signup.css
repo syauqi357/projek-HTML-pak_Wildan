@@ -1,0 +1,333 @@
+* {
+  box-sizing: border-box;
+  font-family: coolvetica, sans-serif;
+}
+
+
+
+a {
+  text-decoration: none;
+  color: #3d3b40;
+}
+
+a:hover {
+  color: #0f1035;
+}
+
+/* menus */
+button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.burger,
+.menu {
+  position: fixed;
+}
+
+.burger {
+  z-index: 4;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 88px;
+  height: 88px;
+  background-image: url("menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+body.open .burger {
+  background-image: url("close.svg");
+}
+
+.background {
+  position: fixed;
+  z-index: 2;
+  top: 44px;
+  left: 44px;
+  aspect-ratio: 1 / 1;
+  translate: -50% -50%;
+  height: 88px;
+  background: #07030a;
+  border-radius: 50%;
+  opacity: 0;
+  transition: 0.6s;
+}
+
+body.open .background {
+  height: 300vh;
+  opacity: 0.8;
+}
+
+.menu {
+  z-index: 3;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.05s;
+}
+
+.menu nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 100px;
+}
+
+body.open .menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+body .menu nav:hover > a {
+  opacity: 0.25;
+}
+
+body .menu nav > a:hover {
+  opacity: 1;
+  translate: 8px 0;
+}
+
+.menu a {
+  position: relative;
+  color: #f9f9f9;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 20px 0 20px 20px;
+  text-decoration: none;
+  opacity: 0;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -26px;
+  translate: 0 -50%;
+  margin-top: 2px;
+  width: 10px;
+  height: 10px;
+  border-top: 3px solid #ffffff;
+  border-right: 3px solid #ffffff;
+  opacity: 0;
+  rotate: 45deg;
+  transition: 0.3s;
+}
+
+.menu a:hover::after {
+  opacity: 1;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    translate: -30px 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body.open .menu a {
+  opacity: 1;
+  animation: appear 0.35s backwards;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+h1 {
+  color: #3d3b40;
+  font-size: 3rem;
+}
+
+label {
+  color: rgb(55, 55, 55);
+  padding-bottom: 7px;
+}
+
+.main-container {
+  width: 38%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .userinput {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .check_BoxAgree {
+    width: 20px;
+    height: 20px;
+    accent-color: #f05941;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+/* signup container */
+
+.signBox {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: rgb(254, 254, 254);
+  border: #b4b4b4 2px solid;
+  border-radius: 13px;
+}
+
+/* input username set name or visualized text  */
+
+.inputBox {
+  width: 100%;
+  padding: 7px;
+  border-radius: 3px;
+  outline: none;
+  border: #b4b4b4 0.5px solid;
+  margin: 3px;
+}
+
+/* input password set pass or unvisualized text */
+
+.pass-input--box {
+  width: 100%;
+  padding: 7px;
+  border-radius: 3px;
+  outline: none;
+  border: #b4b4b4 0.5px solid;
+  margin: 3px;
+  letter-spacing: 3px;
+}
+
+/* input wrapper */
+
+.userinput {
+  display: flex;
+}
+
+
+
+.firstName,
+.lastName,
+.emailInput,
+.password-input,
+.password-confirm,
+.check_BoxAgree,
+.button-signup,
+.login_useContainer {
+  margin: 8px;
+}
+
+/* checkbox wrapper */
+
+.checkfor {
+  margin-top: 13px;
+}
+
+/* checkbox object */
+
+.check_BoxAgree {
+  width: 15px;
+  height: 15px;
+  accent-color: #f05941;
+}
+
+hr {
+  width: 50%;
+}
+
+.signBtn {
+  margin: 3px;
+  width: 100%;
+  padding: 10px;
+  border: #f05941 2px solid;
+  border-radius: 6px;
+  background-color: transparent;
+  font-weight: 500;
+  letter-spacing: 3px;
+  transition: all ease-in-out 0.2s;
+}
+
+.signBtn:hover {
+  background-color: #f05941;
+  color: #f5f5f5;
+}
+
+.login_useContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.google-sign {
+  margin: 13px;
+  padding: 13px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: #f05941 2px solid;
+  border-radius: 4px;
+  background-color: transparent;
+  transition: all ease-in-out 0.2s;
+}
+.google-sign:hover {
+  background-color: #f05941;
+  color: #f5f5f5;
+}
+
+@media only screen and (max-width: 600px) {
+  .google-sign {
+    margin: 10px;
+    padding: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: #f05941 2px solid;
+    border-radius: 4px;
+    background-color: transparent;
+    transition: all ease-in-out 0.2s;
+  }
+}
+
+.ruler-rule {
+  display: flex;
+}
+
+.or-rule {
+  margin: 12px;
+}
+
+.horizonRule {
+  height: 0;
+}
+
+footer {
+  color: #b6bbc4;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: x-small;
+  font-family: jetbrains mono;
+}
+
+.fa-brands {
+  margin-right: 3px;
+}
